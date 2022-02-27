@@ -11,14 +11,22 @@ import matplotlib.pyplot as plt
 pi=np.pi
 
 
-
+# Function defined to return matrix for Coin toss operation.
 def B(theta):
     b= np.array([[np.cos(theta) , 1j*np.sin(theta)],
                  [1j*np.sin(theta), np.cos(theta)]],dtype=complex)
     return b
 
+"""
+The parameters given below characterise the nature of the 
+probability distribution of quantum walker's position after N steps
 
-th0=pi/4
+th0 --> fixes the matrix used to simulate the coin toss operation.
+steps --> number of iterations for which the quantum walk operations are applied.
+a --> acceleration parameter; when initialized as non-zero, it results in accelerated quantum walk
+sites --> number of lattice points in which the quantum walker is allowed to travel 
+"""
+th0=pi/4    
 steps=50
 a=0.0
 sites=2*steps+1
